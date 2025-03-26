@@ -294,6 +294,11 @@ padding:60px 0;
 
 }
 
+.testimonial-boxes{
+    display:flex;
+    flex-flow:column wrap;
+}
+
 .testimonials h1{
     text-transform: uppercase;
     font-size:1rem;
@@ -337,13 +342,37 @@ padding:60px 0;
 }
 
 .gallery{
-    display:flex;
-    flex-flow:row wrap;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    height:300px;
 }
 
-.gallery img{
-    width:50%;
+.gallery-img{
+    width:100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
+.gallery-img:nth-child(1){
+    background-image: url("./img/mobile/image-gallery-milkbottles.jpg");
+}
+
+.gallery-img:nth-child(2){
+    background-image: url("/img/mobile/image-gallery-orange.jpg");
+}
+
+.gallery-img:nth-child(3){
+    background-image: url("/img/mobile/image-gallery-cone.jpg");
+}
+.gallery-img:nth-child(4){
+    background-image: url("/img/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+
+
+
+
+
 
 .footer{
     width:100%;
@@ -478,7 +507,8 @@ padding:60px 0;
         flex-basis:50%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-top:120px;
+        padding-top:145px;
+        padding-bottom:0;
     }
 
     .graphicdesign-section{
@@ -488,7 +518,48 @@ padding:60px 0;
     .photography-section{
         background-image: url("img/desktop/image-photography.jpg");
     }
+
+    .graphicdesign-section h1, .graphicdesign-section p, .photography-section h1, .photography-section p{
+        width:80%;
+        text-align:center;
+        margin-left:30px;
+    }
+
+    .testimonials h1{
+        width:100%;
+        text-align:center;
+        margin:0;
+    }
+
+    .testimonial-boxes{
+        flex-flow:row wrap;
+        justify-content: space-evenly;
+        align-items: start;
+        margin:0 auto;
+    }
+
+    .testimonial-box{
+        flex-basis:30%;
+    }
+
+    .testimonial-text{
+        font-size:0.9rem;
+        padding:0;
+        width:90%;
+        height:30vh;
+        text-align: center;
+    }
+
+    .testimonial-name{
+        font-size:1rem;
+    }
+
+    .testimonial-position{
+        margin:20px 0;
+        text-align: center;
+    }
 }
+
 
 @media(min-width:1024px){
     .menu-hamburguer{
@@ -502,6 +573,7 @@ padding:60px 0;
     .menu-list{
         background: transparent;
         top:-20px;
+        z-index:1;
     }
 
     .menu-list ul{
