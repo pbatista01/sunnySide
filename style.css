@@ -75,6 +75,10 @@ nav{
     align-items: center;
 }
 
+.navbar-logo{
+    margin-left:10px;
+}
+
 /* Menu Styles */
 
 .menu-hamburguer{
@@ -94,26 +98,28 @@ nav{
     background-color:var(--dark-blue);
 }
 
-.menu-list{
-    display:block;
+.menu-list {
+    position: absolute;
+    width:80%;
+    top: 120px;
+    right: auto;
     z-index:1;
-    width:70%;
-    padding:0 42px 42px 42px;
-    height:260px;
-    background-color:var(--white);
-    margin:40px auto;
+    background: white;
+    padding: 35px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
 .menu-list::before {
     content: "";
-    position: relative;
-    top: -45px; /* Ajusta para que sobresalga */
-    right: -252.5px;
+    position: absolute;
+    top: -23px;
+    right: 0px;
     width: 0;
     height: 0;
     z-index:-1;
     border-left: 25px solid transparent;
-    border-bottom: 25px solid white; /* Color igual al fondo del menú */
+    border-bottom: 25px solid white;
 }
 
 .menu-list.closed{
@@ -302,6 +308,7 @@ section img{
     line-height: 25px;
     width:90%;
     margin:20px auto;
+    opacity: 0.9;
 }
 
 .photography-section{
@@ -457,6 +464,18 @@ padding:63px 0 77px 0;
     color:var(--white);
 }
 
+@media(min-width:375px){
+    .menu-list {
+       width:70%;
+    }
+}
+
+@media(min-width:425px){
+    .menu-list {
+        width: 73%;
+    }
+}
+
 @media (min-width:480px) {
 
     .graphicdesign-section, .photography-section{
@@ -474,6 +493,10 @@ padding:63px 0 77px 0;
     }
     .graphicdesign-section h2, .photography-section h2{
         margin-top:550px;
+    }
+
+    .menu-list::before {
+        right: -px;
     }
 }
 
@@ -505,7 +528,7 @@ padding:63px 0 77px 0;
     }
 
     .menu-list{
-        width:80%;
+        width:85%;
     }
 
     .transform-section, .standout-section{
@@ -552,7 +575,7 @@ padding:63px 0 77px 0;
     }
 
     .btn-learnmore{
-        font-size:0.9rem;
+        font-size:0.7rem;
         margin:10px 50px;
     }
 
@@ -625,6 +648,7 @@ padding:63px 0 77px 0;
     .footer-logo{
         width:20%;
     }
+}
 
 @media (min-width:1024px){
     .menu-hamburguer{
@@ -635,22 +659,36 @@ padding:63px 0 77px 0;
         display:flex;
     }
 
+    .navbar-logo img{
+        width:92%;
+    }
+
     .menu-list{
         background: transparent;
-        top:-30px;
+        top:15px;
+        right:0;
         z-index:1;
-        width:70%;
+        width:40%;
         padding:0;
-        margin-right:170px;
         height:auto;
-        position:relative;
+        position:absolute;
+        box-shadow: none;
+    }
+
+    .menu-list.closed{
+        display:block;
+    }
+
+    .menu-list::before{
+        display:none;
     }
 
     .menu-list ul{
         flex-flow: row wrap;
-        width:50%;
-        height:0;
-        margin-left:500px;
+        width:100%;
+        height:auto;
+        justify-content: center;
+        gap:15px;
     }
 
     .menu-list ul a{
@@ -661,6 +699,8 @@ padding:63px 0 77px 0;
     .btn-contact{
         background-color: var(--white);
         width:80px;
+        height: 20px;
+        line-height: 18px;
     }
 
     .btn-contact a{
@@ -698,7 +738,7 @@ padding:63px 0 77px 0;
     .transform-text h2, .standout-text h2{
         width: 61%;
         font-size: 1.8rem;
-        margin: 100px 100px 0;
+        margin: 110px 100px 0;
     }
 
     .transform-text p, .standout-text p{
@@ -765,6 +805,10 @@ padding:63px 0 77px 0;
         height:320px;
     }
 
+    .footer{
+        padding:40px 0;
+    }
+
     .footer-logo{
         width:12%;
     }
@@ -775,6 +819,10 @@ padding:63px 0 77px 0;
     }
 
     .footer-menu a{
-        font-size:1rem;
+        font-size:0.9rem;
+    }
+
+    .socials{
+        gap:20px;
     }
 }
