@@ -73,7 +73,7 @@ body{
 
 nav{
     height:35px;
-    padding:30px 20px;
+    padding:40px 20px;
 
 }
 
@@ -85,7 +85,7 @@ nav{
 }
 
 .navbar-logo{
-    margin-left:10px;
+    margin-left:15px;
 }
 
 /* Hamburger Menu Button */
@@ -327,7 +327,6 @@ section img{
     line-height: 25px;
     width:90%;
     margin:20px auto;
-    opacity: 0.9;
 }
 
 .photography-section{
@@ -601,8 +600,7 @@ section img{
     }
 
     .btn-learnmore{
-        font-size:0.7rem;
-        margin:10px 50px;
+        margin:20px 50px;
     }
 
     /* Ensure proper alignment of graphic sections */
@@ -694,13 +692,13 @@ section img{
 
     /* Adjust navbar logo size */
     .navbar-logo img{
-        width:92%;
+        width:140%;
     }
 
     /* Adjust menu positioning */
     .menu-list{
         background: transparent;
-        top:15px;
+        top:26px;
         right:0;
         z-index:1;
         width:40%;
@@ -730,7 +728,6 @@ section img{
 
     .menu-list ul a{
         color:var(--white);
-        font-size:0.8rem;
     }
 
     /* Style contact button */
@@ -749,13 +746,20 @@ section img{
     /* Adjust header size */
     .header{
         width:100%;
-        height:580px;
+        height:798px;
+    }
+
+    .header-text h1{
+        width:100%;
+        font-size:3rem;
+        letter-spacing: 11px; 
+        margin-top:90px;   
     }
 
     .header-text img{
-        width:25px;
+        width:38px;
         position:relative;
-        top:70px;
+        top:95px;
         left: 49%;
         z-index:0;
     }
@@ -856,15 +860,152 @@ section img{
     }
 
     .footer-menu{
-        width:35%;
+        width:25%;
         margin:0 auto;
     }
 
     .footer-menu a{
+        font-size:1.1rem;
+    }
+
+}
+
+@media (min-width:1440px){
+    .menu-list ul{
+    
+        gap:35px;
+        
+    }
+
+    .btn-contact{
+        width:120px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .btn-contact a{
+        font-size:1rem !important;
+    }
+
+    .header-text h1{
+        font-size:3.5rem;
+        letter-spacing: 11px; 
+        margin-top:78px;   
+    }
+
+    .transform-section, .standout-section{
+        height:600px;
+    }
+
+    .transform-img, .standout-img{
+        flex-basis:50%;
+        height:100%;
+    }
+
+    .transform-text, .standout-text{
+        flex-basis:50%;
+        padding:0;        
+    }
+
+    .transform-text h2, .standout-text h2{
+        width: 61%;
+        font-size: 2.55rem;
+        
+    }
+
+    .transform-text h2{
+        margin: 165px 165px 0;
+    }
+
+    .standout-text h2{
+        margin: 155px 115px 0;
+    }
+
+    .transform-text p, .standout-text p{
+        width:63%;
+        font-size:1.15rem;
+        line-height:30px;
+    }
+
+    .transform-text p{
+        margin: 25px 165px 0;
+    }
+
+    .standout-text p{
+        margin: 25px 115px 0;
+    }
+
+    .btn-learnmore{
+        margin: 43px 170px;
+    }
+
+    .btn-learnmore.btn2{
+        margin: 43px 115px;
+    }
+
+    .graphicdesign-section,.photography-section{
+        height:600px;
+    }
+
+    .graphicdesign-section h2, .photography-section h2{
+        margin-top:398px;
+        font-size:1.8rem;
+    }
+
+    .graphicdesign-section p, .photography-section p{
+        width:50%;
+        font-size:1rem;
+        line-height: 30px;
+        margin:17px auto;
+    }
+
+    .testimonials{
+        height:558px;
+    }
+
+    .testimonials h2{
+        margin-top:50px;
+        font-size:1.2rem;
+        letter-spacing:6px;
+    }
+
+    .testimonial-boxes{
+        padding:0;
+        width:75%;
+        margin:48px auto;
+        gap:0;
+    }
+
+    .testimonial-box{
+        flex-basis:29%;
+    }
+
+
+    .testimonial-text{
+        font-size:1.05rem;
+        width:110%;
+        line-height: 30px;
+        margin:20px 0 42px;
+    }
+
+    .testimonial-box img{
+        width:70px;
+    }
+
+    .testimonial-name{
+        font-size:1.1rem;
+    }
+
+    .testimonial-position{
         font-size:0.9rem;
     }
 
-    .socials{
-        gap:20px;
+    .gallery-img{
+        height:445px;
     }
+
+    .footer{
+        padding:80px 0;
+    }
+
 }
